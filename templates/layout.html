@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eve</title>
+</head>
+<body>
+{% with messages=get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for msg in messages %}
+                <li>{{ msg }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% from '_formhelpers.html' import render_field %}
+
+{% block body %}
+    <form method="post" enctype="application/x-www-form-urlencoded">
+        <dl>
+{#            todo 待改用更高级的方法#}
+            {{ render_field(form.mine_name) }}
+            {{ render_field(form.price) }}
+            {{ render_field(form.volume) }}
+            {{ render_field(form.is_ice) }}
+        </dl>
+        <br>
+        <input type="submit" value="插入订单">
+    </form>
+{% endblock %}
